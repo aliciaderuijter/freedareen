@@ -14,15 +14,17 @@ return [
     */
 
     'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
-    'donate' => 'Donate',
+    'amount' => 'Amount',
+    'donatedBy' => 'Donated by',
+    'name' => 'Name',
+    'title' => '  גיוס תרומות להגנתה של דארין טאטור',
+    'thanks' => 'Thank you for supporting Dareen',
+    'received' => 'We received your donation.',
+    'publish' => 'Publish',
+    'unsuccessful' => 'Unfortunately we did not receive your donation.',
+    'people' => 'people',
+    'arabic' => 'العربية',
+    'hebrew' => 'עברי'
 
 
 

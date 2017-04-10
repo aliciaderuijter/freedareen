@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Donation;
 use App\Models\Story;
 use Illuminate\Http\Request;
@@ -22,7 +23,9 @@ class HomeController extends Controller
         $donations  = Donation::sum('amount');
         $people = Donation::count();
 
-        return view('welcome', compact('story','donations','people'));
+        $articles = Article::all();
+
+        return view('pages.welcome', compact('story','donations','people','articles'));
     }
 
     public function paypal(Request $request)

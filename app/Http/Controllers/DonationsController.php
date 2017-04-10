@@ -25,7 +25,7 @@ class DonationsController extends Controller
     {
         $navbarClass = 'no-margin';
         if($request->get('token')== null) {
-            return view ('aftermath.thankyou', compact('navbarClass'));
+            return view ('aftermath.thankyou', compact('navbarClass', 'articles'));
         }
         $token = $request->get('token');
         $PayerID = $request->get('PayerID');

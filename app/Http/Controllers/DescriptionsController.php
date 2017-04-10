@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Description;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -17,7 +18,8 @@ class DescriptionsController extends Controller
               $description = new Description();
           }
 
-          return view ('about', compact('description'));
+          $articles= Article::all();
+          return view ('pages.about', compact('description','articles'));
 
       }
     public function store(Request $request)

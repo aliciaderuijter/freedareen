@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 
@@ -20,6 +21,13 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
+    public function showLoginForm()
+    {
+
+        $articles= Article::all();
+        return view('auth.login', compact('articles'));
+    }
 
     /**
      * Where to redirect users after login.

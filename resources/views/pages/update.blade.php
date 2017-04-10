@@ -1,7 +1,7 @@
 @extends('partials.layouts.layout')
 
 @section('content')
-    <div class="container">
+    <div class="container main-fold">
         @if (Session::has('status'))
             <div class="row">
                 <div class="col-xs-12">
@@ -16,7 +16,6 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                @include('partials.errors')
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#story">@lang('misc.title')</a></li>
                     <li><a data-toggle="tab" href="#about">@lang('nav-footer.about')</a></li>
@@ -27,6 +26,7 @@
                 <div class="tab-content">
                     @include('partials.forms.story')
                     @include('partials.forms.about')
+                    @include('partials.forms.articles')
                 </div>
 
             </div>

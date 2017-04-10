@@ -27,8 +27,10 @@ Route::post('login', 'Auth\LoginController@login');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('update','StoriesController@update');
-    Route::post('update', 'StoriesController@store');
-    Route::post('update/2', 'DescriptionsController@store');
+    Route::post('update/stories', 'StoriesController@store');
+    Route::post('update/about', 'DescriptionsController@store');
+    Route::post('update/articles', 'ArticlesController@store');
+    Route::delete('articles/{article}', 'ArticlesController@delete');
 
 });
 

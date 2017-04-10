@@ -1,7 +1,7 @@
 <div class="jumbotron">
     <div class="container">
-        <h2>@lang('misc.unsuccessful')<br> Please try again </h2>
-        @include('donate')
+        <h2>@lang('misc.unsuccessful')<br>@lang('misc.tryAgain') </h2>
+        @include('partials.donate')
 
     </div>
 </div>

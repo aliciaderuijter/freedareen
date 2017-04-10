@@ -12,9 +12,18 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'donate' => 'Donate',
-
+    'amount' => 'Amount',
+    'donatedBy' => 'Donated by',
+    'name' => 'Name',
+    'title' => 'حملة تبرّعات',
+    'thanks' => 'Thank you for supporting Dareen',
+    'received' => 'We received your donation.',
+    'publish' => 'Publish',
+    'unsuccessful' => 'Unfortunately we did not receive your donation.',
+    'people' => 'people',
+    'arabic' => 'العربية',
+    'hebrew' => 'עברי'
 
 
 

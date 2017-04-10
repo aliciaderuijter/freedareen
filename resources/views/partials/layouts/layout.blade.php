@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Free Dareen</title>
+    <title>@lang('misc.freeDareen')</title>
     <link href="/css/app.css" rel="stylesheet">
 
     <script>

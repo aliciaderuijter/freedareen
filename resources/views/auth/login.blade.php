@@ -3,13 +3,13 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container main-fold">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="text-center">
-                            Login
+                            @lang('auth.login')
                         </h3>
                     </div>
                     <div class="panel-body">
@@ -18,7 +18,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('user') ? ' has-error' : '' }}">
-                                <label for="user" class="col-md-4 control-label">Username</label>
+                                <label for="user" class="col-md-4 control-label">@lang('auth.username')</label>
 
                                 <div class="col-md-6">
                                     <input id="user" type="user" class="form-control" name="name"
@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">password</label>
+                                <label for="password" class="col-md-4 control-label">@lang('auth.password')</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control" name="password" required>
@@ -51,7 +51,7 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox"
-                                                   name="remember" {{ old('remember') ? 'checked' : ''}}>Remember me
+                                                   name="remember" {{ old('remember') ? 'checked' : ''}}>@lang('auth.remember')
                                         </label>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Login
+                                        @lang('auth.login')
                                     </button>
 
                                     <a class="btn btn-link" href="{{ url('/password/reset')}}">
@@ -68,7 +68,6 @@
                                     </a>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

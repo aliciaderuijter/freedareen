@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Description;
 use App\Models\Story;
 use Illuminate\Http\Request;
@@ -21,7 +22,10 @@ class StoriesController extends Controller
         if (!$description) {
             $description = new Description();
         }
-        return view('update',compact('story','description'));
+
+        $articles= Article::all();
+
+        return view('pages.update',compact('story','description','articles'));
     }
 
 

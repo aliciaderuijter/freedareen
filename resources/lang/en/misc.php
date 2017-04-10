@@ -22,7 +22,15 @@ return [
     'received' => 'We received your donation.',
     'publish' => 'Publish',
     'unsuccessful' => 'Unfortunately we did not receive your donation.',
-    'people' => 'people'
+    'people' => 'people',
+    'arabic' => 'العربية',
+    'hebrew' => 'עברי',
+    'english' => 'english',
+    'freeDareen' => 'Free Dareen',
+    'tryAgain' => 'Please try again',
+    'link' => 'Link',
+    'dollars' => 'USD',
+
 
 
 

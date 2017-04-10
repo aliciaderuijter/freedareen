@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="container">
+    <div class="container main-fold">
         <div class="row">
             <div class="col-xs-12">
                 <h1>@lang('nav-footer.about')</h1>
