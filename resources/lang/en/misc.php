@@ -30,6 +30,8 @@ return [
     'tryAgain' => 'Please try again',
     'link' => 'Link',
     'dollars' => 'USD',
+    'jvp'=> 'https://jewishvoiceforpeace.org/dareen/',
+    'sign'=> 'Sign Petition'
 
 
 

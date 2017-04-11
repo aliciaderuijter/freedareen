@@ -9,8 +9,8 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
-              <h2>
-                  <strong> ${{$donations}} @lang('misc.dollars') </strong>
+                <h2>
+                    <strong> ${{$donations}} @lang('misc.dollars') </strong>
                 </h2>
                 <h4>@lang('misc.donatedBy') {{$people}} @lang('misc.people').</h4>
 
@@ -28,11 +28,22 @@
                 <div>
 
                     <p>
-                      <pre class="wrapped {{ App::getLocale() == 'en' ? 'text-left' : 'text-right' }}">{{$story->story}}</pre>
+                    <pre class="wrapped {{ App::getLocale() == 'en' ? 'text-left' : 'text-right' }}">{!! $story->story !!}</pre>
                     </p>
                 </div>
             </div>
+            <div class="col-xs-12 col-md-4">
+                <h4> Visit Jewish Voice for Peace and <br> Sign our Petition</h4>
+                <p>
+                    <a href="@lang('misc.jvp')" target="_blank">
+                        <button class="btn btn-danger">@lang('misc.sign')</button>
+                    </a>
+                </p>
 
+                <div>
+                    <img src="/images/dareen2.jpg" class="img-responsive" alt="dareen">
+                </div>
+            </div>
         </div>
     </div>
 @endsection

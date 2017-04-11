@@ -24,7 +24,10 @@ return [
     'unsuccessful' => 'Unfortunately we did not receive your donation.',
     'people' => 'people',
     'arabic' => 'العربية',
-    'hebrew' => 'עברי'
+    'hebrew' => 'עברי',
+    'jvp'=> 'https://jewishvoiceforpeace.org/dareen/',
+    'sign'=> 'Sign Petition'
+
 
 
 

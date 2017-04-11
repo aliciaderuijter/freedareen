@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">@lang('misc.donate')</button>
+<button type="button" class="btn btn-success btn-lg" data-toggle="modal"
+        data-target="#myModal">@lang('misc.donate')</button>
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         >
@@ -15,12 +16,9 @@
                         <label for="name">@lang('misc.name')</label>
                         <input type="text" class="form-control" id="name" name="name" value="Anonymous">
                     </div>
-                    <div class="form-group">
-                        <label for="amount">@lang('misc.amount'):</label>
-                        <money-input></money-input>
-                    </div>
+                    <money-input title="@lang('misc.amount'):"></money-input>
                     <div class="form-group text-right">
-                    <button class="btn btn-success " id="donate">@lang('misc.donate')</button>
+                        <button class="btn btn-success " id="donate">@lang('misc.donate')</button>
                     </div>
                 </form>
             </div>

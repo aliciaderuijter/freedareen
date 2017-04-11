@@ -9,7 +9,7 @@
     <h1>@lang('misc.thanks')</h1>
     <p>
 
-        <img src="/images/dareen.jpg" class="img-responsive" alt="Cinque Terre">
+        <img src="/images/dareen.jpg" class="img-responsive" alt="dareen">
     </p>
 </div>
 

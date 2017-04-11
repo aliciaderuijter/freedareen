@@ -3,8 +3,9 @@
     {{ csrf_field() }}
 
     <div class="form-group">
-        <textarea class="form-control big" id="story"
-                  name="story">{{$story->story}}</textarea>
+        <medium-editor text="{{ $story->story }}" v-on:edit="editStory" :reuse-medium-editor-instance="false"></medium-editor>
+        <textarea id="storyText" class="hidden"
+                  name="story">{!! $story->story !!}</textarea>
     </div>
 
     <div class="form-group">
