@@ -27,8 +27,8 @@
                 <h2>@lang('misc.title')</h2>
                 <div>
 
-                    <p>
-                    <pre class="wrapped {{ App::getLocale() == 'en' ? 'text-left' : 'text-right' }}">{!! $story->story !!}</pre>
+                    <p class="{{ App::getLocale() == 'en' ? 'text-left' : 'text-right' }}">
+                    {!! $story->story !!}
                     </p>
                 </div>
             </div>
