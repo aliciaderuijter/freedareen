@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Donation;
 use Illuminate\Http\Request;
 use Srmklive\PayPal\Services\ExpressCheckout;
@@ -18,14 +19,17 @@ class DonationsController extends Controller
 
     public function unsuccessful()
     {
-        return view('aftermath.unsuccesful');
+        $articles = Article::all();
+
+        return view('aftermath.unsuccesful', compact('articles'));
     }
 
     public function thanks(Request $request)
     {
+        $articles = Article::all();
         $navbarClass = 'no-margin';
-        if($request->get('token')== null) {
-            return view ('aftermath.thankyou', compact('navbarClass', 'articles'));
+        if ($request->get('token') == null) {
+            return view('aftermath.thankyou', compact('navbarClass', 'articles'));
         }
         $token = $request->get('token');
         $PayerID = $request->get('PayerID');
@@ -52,12 +56,12 @@ class DonationsController extends Controller
 
         if ($finalize['ACK'] == 'Success') {
 
-            $donate= new Donation;
-            $donate->name= $request->session()->get('name');
-            $donate->amount= $response['AMT'];
+            $donate = new Donation;
+            $donate->name = $request->session()->get('name');
+            $donate->amount = $response['AMT'];
             $donate->save();
 
-            return view('aftermath.thankyou', compact('navbarClass'));
+            return view('aftermath.thankyou', compact('navbarClass', 'articles'));
 
         } else {
             return redirect('unsuccessful');

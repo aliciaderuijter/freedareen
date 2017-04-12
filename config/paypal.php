@@ -5,13 +5,13 @@
  */
 
 return [
-    'mode'    => 'sandbox', // Can only be 'sandbox' Or 'live'. If empty or invalid, 'live' will be used.
+    'mode'    => env('PAYPAL_MODE', ''), // Can only be 'sandbox' Or 'live'. If empty or invalid, 'live' will be used.
     'sandbox' => [
         'username'    => env('PAYPAL_SANDBOX_API_USERNAME', ''),
         'password'    => env('PAYPAL_SANDBOX_API_PASSWORD', ''),
         'secret'      => env('PAYPAL_SANDBOX_API_SECRET', ''),
         'certificate' => env('PAYPAL_SANDBOX_API_CERTIFICATE', ''),
-        'app_id'      => '6WB4Q5KMFPYGY', // Used for testing Adaptive Payments API in sandbox mode
+        'app_id'      => '', // Used for testing Adaptive Payments API in sandbox mode
     ],
     'live' => [
         'username'    => env('PAYPAL_LIVE_API_USERNAME', ''),
