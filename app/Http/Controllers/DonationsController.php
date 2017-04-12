@@ -14,7 +14,7 @@ class DonationsController extends Controller
     {
         $query = Donation::latest();
 
-        return response()->json($query->paginate(5));
+        return response()->json($query->paginate(4));
     }
 
     public function unsuccessful()

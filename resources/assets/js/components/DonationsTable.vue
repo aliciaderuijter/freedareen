@@ -5,7 +5,7 @@
                   :fields="fields"
                   :css="css"
                   pagination-path=""
-                  :per-page="5"
+                  :per-page="4"
                   @vuetable:pagination-data="onPaginationData"
         >
 

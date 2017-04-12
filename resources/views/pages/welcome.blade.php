@@ -53,8 +53,8 @@
 
     <script>
         window.paypalCheckoutReady = function () {
-            paypal.checkout.setup('6WB4Q5KMFPYGY', {
-                environment: 'sandbox',
+            paypal.checkout.setup({env('PAYPAL_MODE', '') == 'live' ? env('PAYPAL_LIVE_API_PASSWORD', '') : env('PAYPAL_SANDBOX_API_PASSWORD', '')}}, {
+                environment: {{ env('PAYPAL_MODE', '') }},
                 button: 'donate'
             });
         };

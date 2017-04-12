@@ -42256,7 +42256,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "fields": _vm.fields,
       "css": _vm.css,
       "pagination-path": "",
-      "per-page": 5
+      "per-page": 4
     },
     on: {
       "vuetable:pagination-data": _vm.onPaginationData
