@@ -55,6 +55,7 @@ class HomeController extends Controller
         $options = [
             'BRANDNAME' => 'Free Dareen Tatour',
             'NoShipping' => 1,
+            'SolutionType' => 'Sole'
         ];
 
 
