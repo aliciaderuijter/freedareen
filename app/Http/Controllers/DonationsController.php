@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ThankYou;
 use App\Models\Article;
 use App\Models\Donation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Srmklive\PayPal\Services\ExpressCheckout;
 
 
@@ -17,6 +19,7 @@ class DonationsController extends Controller
         return response()->json($query->paginate(4));
     }
 
+
     public function unsuccessful()
     {
         $articles = Article::all();
@@ -24,7 +27,8 @@ class DonationsController extends Controller
         return view('aftermath.unsuccesful', compact('articles'));
     }
 
-    public function thanks(Request $request)
+    public
+    function thanks(Request $request)
     {
         $articles = Article::all();
         $navbarClass = 'no-margin';
@@ -55,6 +59,8 @@ class DonationsController extends Controller
         $finalize = $paypal->doExpressCheckoutPayment($data, $token, $PayerID);
 
         if ($finalize['ACK'] == 'Success') {
+
+            Mail::to($response['EMAIL'])->send(new ThankYou($request->session()->get('name')));
 
             $donate = new Donation;
             $donate->name = $request->session()->get('name');

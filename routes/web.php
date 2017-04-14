@@ -21,6 +21,7 @@ Route::get('unsuccessful','DonationsController@unsuccessful');
 Route::get('donations','DonationsController@show');
 Route::get('about','DescriptionsController@show');
 
+
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('logout', 'Auth\LoginController@logout');
 Route::post('login', 'Auth\LoginController@login');
