@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-        data-target="#myModal">@lang('misc.donate')</button>
+        data-target="#myModal">@lang('misc.donate')</button><h4 class="visible-xs-inline visible-lg-inline visible-md-inline visible-sm-inline"> @lang('misc.aid')</h4>
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         >

@@ -31,7 +31,9 @@ return [
     'link' => 'Link',
     'dollars' => 'USD',
     'jvp'=> 'https://jewishvoiceforpeace.org/dareen/',
-    'sign'=> 'Sign Petition'
+    'sign'=> 'Sign Petition',
+    'signPetition' => 'Sign the petition to end the persecution of Dareen Tatour',
+    'aid'=> 'to Dareen Tatour\'s Legal Aid'
 
 
 

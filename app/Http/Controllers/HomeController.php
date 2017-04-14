@@ -52,13 +52,20 @@ class HomeController extends Controller
             ]
         ];
 
+        $options = [
+            'BRANDNAME' => 'Free Dareen Tatour',
+            'NoShipping' => 1,
+        ];
+
+
+
         $data['invoice_id'] = uniqid();
         $data['invoice_description'] = "Order #{$data['invoice_id']} Invoice";
         $data['return_url'] = url('/thankyou');
         $data['cancel_url'] = url('/');
         $data['total'] = $request->get('amount');
 
-        $response = $provider->setExpressCheckout($data);
+        $response = $provider->addOptions($options)->setExpressCheckout($data);
 
         return redirect($response['paypal_link']);
     }

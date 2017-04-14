@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                <h4> Visit Jewish Voice for Peace and <br> Sign our Petition</h4>
+                <h4>@lang('misc.signPetition')</h4>
                 <p>
                     <a href="@lang('misc.jvp')" target="_blank">
                         <button class="btn btn-danger">@lang('misc.sign')</button>
