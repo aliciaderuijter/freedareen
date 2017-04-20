@@ -15,7 +15,7 @@ require('./bootstrap');
 
 Vue.component('donationsTable', require('./components/DonationsTable.vue'));
 Vue.component('moneyInput', require('./components/MoneyInput.vue'));
-import editor from 'vue2-medium-editor'
+//import editor from 'vue2-medium-editor'
 
 const app = new Vue({
     el: '#app',
@@ -30,6 +30,6 @@ const app = new Vue({
     },
 
     components: {
-        'medium-editor': editor
+ //       'medium-editor': editor
     }
 });
