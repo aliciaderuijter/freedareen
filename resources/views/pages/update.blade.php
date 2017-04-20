@@ -1,4 +1,4 @@
-@extends('partials.layouts.layout')
+@extends('partials.layouts.editPageLayout')
 
 @section('content')
     <div class="container main-fold">

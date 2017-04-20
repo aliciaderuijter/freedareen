@@ -15,6 +15,7 @@ require('./bootstrap');
 
 Vue.component('donationsTable', require('./components/DonationsTable.vue'));
 Vue.component('moneyInput', require('./components/MoneyInput.vue'));
+import editor from 'vue2-medium-editor'
 
 const app = new Vue({
     el: '#app',
@@ -26,5 +27,9 @@ const app = new Vue({
         editAbout(text){
             $('#description').text(text);
         }
+    },
+
+    components: {
+        'medium-editor': editor
     }
 });
