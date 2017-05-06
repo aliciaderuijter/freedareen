@@ -19,6 +19,8 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#story">@lang('misc.title')</a></li>
                     <li><a data-toggle="tab" href="#about">@lang('nav-footer.about')</a></li>
+                    <li><a data-toggle="tab" href="#poems">@lang('misc.poems')</a></li>
+                    <li><a data-toggle="tab" href="#supportForm">@lang('misc.support')</a></li>
                     <li><a data-toggle="tab" href="#articles">@lang('nav-footer.articles')</a></li>
 
                 </ul>
@@ -27,6 +29,8 @@
                     @include('partials.forms.story')
                     @include('partials.forms.about')
                     @include('partials.forms.articles')
+                    @include('partials.forms.poems')
+                    @include('partials.forms.support')
                 </div>
 
             </div>

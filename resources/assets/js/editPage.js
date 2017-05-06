@@ -26,6 +26,12 @@ const app = new Vue({
         },
         editAbout(text){
             $('#description').text(text);
+        },
+        editPoem(text){
+            $('#poem').text(text);
+        },
+        editSupport(text){
+            $('#support').text(text);
         }
     },
 

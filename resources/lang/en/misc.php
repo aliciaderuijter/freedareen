@@ -30,11 +30,13 @@ return [
     'tryAgain' => 'Please try again',
     'link' => 'Link',
     'dollars' => 'USD',
-    'jvp'=> 'https://jewishvoiceforpeace.org/dareen/',
+    'petition'=> 'http://www.pen-international.org/newsitems/world-poetry-day-2017-take-action-for-dareen-tatour/',
     'sign'=> 'Sign Petition',
     'signPetition' => 'Sign the petition to end the persecution of Dareen Tatour',
     'aid'=> 'to Dareen Tatour\'s Legal Aid',
-    'email' => 'freedareentatour@gmail.com'
+    'email' => 'freedareentatour@gmail.com',
+    'poems' => 'poems',
+    'support' => 'Solidarity'
 
 
 

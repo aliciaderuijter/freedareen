@@ -16,16 +16,16 @@ class HomeController extends Controller
     {
         $story = Story::where(['language' => App::getLocale()])->first();
 
-        if(! $story){
+        if (!$story) {
             $story = new Story;
         }
 
-        $donations  = Donation::sum('amount');
+        $donations = Donation::sum('amount');
         $people = Donation::count();
 
         $articles = Article::all();
 
-        return view('pages.welcome', compact('story','donations','people','articles'));
+        return view('pages.welcome', compact('story', 'donations', 'people', 'articles'));
     }
 
     public function paypal(Request $request)
@@ -57,7 +57,6 @@ class HomeController extends Controller
             'NoShipping' => 1,
             'SolutionType' => 'Sole'
         ];
-
 
 
         $data['invoice_id'] = uniqid();
