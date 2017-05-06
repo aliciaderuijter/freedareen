@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Description;
+use App\Models\Poem;
 use App\Models\Story;
+use App\Models\Support;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -14,18 +16,32 @@ class StoriesController extends Controller
     {
         $story = Story::where(['language' => App::getLocale()])->first();
 
-        if(! $story){
+        if (!$story) {
             $story = new Story;
         }
         $description = Description::where(['language' => App::getLocale()])->first();
 
         if (!$description) {
-            $description = new Description();
+            $description = new Description;
         }
 
-        $articles= Article::all();
+        $poem = Poem::first();
 
-        return view('pages.update',compact('story','description','articles'));
+        if (!$poem) {
+            $poem = new Poem;
+
+        }
+
+        $support = Support::first();
+
+        if (!$support) {
+            $support = new support;
+
+        }
+
+        $articles = Article::all();
+
+        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support'));
     }
 
 
@@ -34,7 +50,7 @@ class StoriesController extends Controller
         $this->validate(request(), ['story' => 'required']);
 
         $story = Story::where('language', App::getLocale())->first();
-        if(! $story){
+        if (!$story) {
             $story = new Story;
         }
         /*if(Story::where('language','en')){
@@ -48,7 +64,7 @@ class StoriesController extends Controller
 
         $request->session()->flash('status', 'Story saved successfully!');
 
-       return redirect()->back();
+        return redirect()->back();
     }
 
 }

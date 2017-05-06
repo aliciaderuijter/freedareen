@@ -20,6 +20,8 @@ Route::get('lang/{lang}', 'LanguageController@switchLang');
 Route::get('unsuccessful','DonationsController@unsuccessful');
 Route::get('donations','DonationsController@show');
 Route::get('about','DescriptionsController@show');
+Route::get('poems','PoemsController@show');
+Route::get('support','SupportsController@show');
 
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -30,7 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('update','StoriesController@update');
     Route::post('update/stories', 'StoriesController@store');
     Route::post('update/about', 'DescriptionsController@store');
+    Route::post('update/poem', 'PoemsController@store');
     Route::post('update/articles', 'ArticlesController@store');
+    Route::post('update/support', 'SupportsController@store');
+
     Route::delete('articles/{article}', 'ArticlesController@delete');
 
 });

@@ -44329,6 +44329,12 @@ var app = new Vue({
         },
         editAbout: function editAbout(text) {
             $('#description').text(text);
+        },
+        editPoem: function editPoem(text) {
+            $('#poem').text(text);
+        },
+        editSupport: function editSupport(text) {
+            $('#support').text(text);
         }
     },
 

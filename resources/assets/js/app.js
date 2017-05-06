@@ -18,13 +18,4 @@ Vue.component('moneyInput', require('./components/MoneyInput.vue'));
 
 const app = new Vue({
     el: '#app',
-
-    methods: {
-        editStory(text){
-            $('#storyText').text(text);
-        },
-        editAbout(text){
-            $('#description').text(text);
-        }
-    }
 });

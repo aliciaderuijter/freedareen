@@ -44316,16 +44316,7 @@ Vue.component('donationsTable', __webpack_require__(43));
 Vue.component('moneyInput', __webpack_require__(44));
 
 var app = new Vue({
-    el: '#app',
-
-    methods: {
-        editStory: function editStory(text) {
-            $('#storyText').text(text);
-        },
-        editAbout: function editAbout(text) {
-            $('#description').text(text);
-        }
-    }
+  el: '#app'
 });
 
 /***/ }),
