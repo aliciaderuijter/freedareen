@@ -9,15 +9,19 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                <h2>
-                    <strong> ${{$donations}} @lang('misc.dollars') </strong>
-                </h2>
-                <h4>@lang('misc.donatedBy') {{$people}} @lang('misc.people').</h4>
 
-                @include('partials.donate')
-                @include('partials.errors')
+                <div class="form-group text-left">
+                    <h2>Dareen Tatour Legal Aid</h2>
+                    <a href="@lang('misc.generosity')" target="_blank">
+                        <button class="btn btn-primary btn-lg">Donate</button>
+                    </a>
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-                <donations-table class="margin-top" url="{{ action('DonationsController@show') }}"></donations-table>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>
@@ -45,6 +49,22 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-2">
+                <div class="'row">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=freedareentatour.org&title=Free Dareen Tatour" target="_blank">
+                        <button class="btn btn-primary"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button></a>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <div class="'row">
+                    <a href="https://twitter.com/home?status=" target="_blank">
+                        <button class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i>Share on Twitter</button></a>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
@@ -54,7 +74,7 @@
     <script>
         window.paypalCheckoutReady = function () {
             paypal.checkout.setup(
-                    '{{env('PAYPAL_MODE', '') == 'live' ? env('PAYPAL_LIVE_API_PASSWORD', '') : env('PAYPAL_SANDBOX_API_PASSWORD', '')}}', {
+                '{{env('PAYPAL_MODE', '') == 'live' ? env('PAYPAL_LIVE_API_PASSWORD', '') : env('PAYPAL_SANDBOX_API_PASSWORD', '')}}', {
                     environment: '{{ env('PAYPAL_MODE', '') }}',
                     button: 'donate'
                 });

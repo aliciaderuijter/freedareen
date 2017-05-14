@@ -18,7 +18,8 @@ return [
     'about' => 'About us',
     'contact' => 'Contact us',
     'poems'=> 'Poems',
-    'support'=>'Solidarity'
+    'support'=>'Solidarity',
+    'trial'=>'Trial'
 
 
 

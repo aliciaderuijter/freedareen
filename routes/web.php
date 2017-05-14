@@ -22,6 +22,7 @@ Route::get('donations','DonationsController@show');
 Route::get('about','DescriptionsController@show');
 Route::get('poems','PoemsController@show');
 Route::get('support','SupportsController@show');
+Route::get('trial','TrialController@show');
 
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -35,6 +36,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('update/poem', 'PoemsController@store');
     Route::post('update/articles', 'ArticlesController@store');
     Route::post('update/support', 'SupportsController@store');
+    Route::post('update/trial', 'TrialController@store');
+
 
     Route::delete('articles/{article}', 'ArticlesController@delete');
 
