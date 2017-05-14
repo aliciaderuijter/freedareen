@@ -26,7 +26,7 @@
             </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row margin-bottom">
             <div class="col-xs-12 col-md-8 {{ App::getLocale() == 'en' ? 'text-left' : 'text-right' }}">
                 <h2>@lang('misc.title')</h2>
                 <div>
@@ -35,6 +35,16 @@
                         {!! $story->story !!}
                     </p>
                 </div>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=freedareentatour.org&title=Free Dareen Tatour"
+                   target="_blank">
+                    <button class="btn btn-primary"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button>
+                </a>
+
+                <a href="https://twitter.com/intent/tweet?text=Help%20out%21%20Give%20to%20Dareen%20Tatour%20Legal%20Aid%20https%3A%2F%2Ffreedareentatour.org." target="_blank">
+                    <button class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i>Share on Twitter
+                    </button>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h4>@lang('misc.signPetition')</h4>
@@ -50,21 +60,7 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-md-2">
-                <div class="'row">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=freedareentatour.org&title=Free Dareen Tatour" target="_blank">
-                        <button class="btn btn-primary"><i class="fa fa-facebook fa-2"></i> Share on Facebook</button></a>
 
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-2">
-                <div class="'row">
-                    <a href="https://twitter.com/home?status=" target="_blank">
-                        <button class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i>Share on Twitter</button></a>
-                </div>
-            </div>
-        </div>
     </div>
 @endsection
 
