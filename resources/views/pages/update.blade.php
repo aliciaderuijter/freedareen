@@ -31,6 +31,8 @@
                     @include('partials.forms.articles')
                     @include('partials.forms.poems')
                     @include('partials.forms.support')
+                    @include('partials.forms.trial')
+
                 </div>
 
             </div>
