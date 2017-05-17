@@ -44335,6 +44335,9 @@ var app = new Vue({
         },
         editSupport: function editSupport(text) {
             $('#support').text(text);
+        },
+        editTrial: function editTrial(text) {
+            $('#trialText').text(text);
         }
     },
 
