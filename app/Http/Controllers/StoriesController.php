@@ -7,6 +7,7 @@ use App\Models\Description;
 use App\Models\Poem;
 use App\Models\Story;
 use App\Models\Support;
+use App\Models\Trial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -39,9 +40,16 @@ class StoriesController extends Controller
 
         }
 
+        $trial = Trial::first();
+
+        if (!$trial) {
+            $trial = new trial;
+
+        }
+
         $articles = Article::all();
 
-        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support'));
+        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial'));
     }
 
 

@@ -3,7 +3,7 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <medium-editor text="{{ $trial->trial }}" v-on:edit="editSupport" :reuse-medium-editor-instance="false"></medium-editor>
+            <medium-editor text="{{ $trial->trial }}" v-on:edit="editTrial" :reuse-medium-editor-instance="false"></medium-editor>
             <textarea class="hidden" id="trialText"
                       name="trial">{!! $trial->trial !!}</textarea>
         </div>

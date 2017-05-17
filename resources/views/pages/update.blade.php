@@ -21,6 +21,7 @@
                     <li><a data-toggle="tab" href="#about">@lang('nav-footer.about')</a></li>
                     <li><a data-toggle="tab" href="#poems">@lang('misc.poems')</a></li>
                     <li><a data-toggle="tab" href="#supportForm">@lang('misc.support')</a></li>
+                    <li><a data-toggle="tab" href="#trial">@lang('nav-footer.trial')</a></li>
                     <li><a data-toggle="tab" href="#articles">@lang('nav-footer.articles')</a></li>
 
                 </ul>

@@ -32,6 +32,9 @@ const app = new Vue({
         },
         editSupport(text){
             $('#support').text(text);
+        },
+        editTrial(text){
+            $('#trialText').text(text);
         }
     },
 
