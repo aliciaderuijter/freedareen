@@ -25,7 +25,7 @@ return [
     'arabic' => 'العربية',
     'hebrew' => 'עברי',
     'jvp'=> 'https://jewishvoiceforpeace.org/dareen/',
-    'sign'=> 'Sign Petition',
+    'take'=> 'Take Action',
     'signPetition' => 'Sign the petition to end the persecution of Dareen Tatour',
     'aid'=> 'to Dareen Tatour\'s Legal Aid'
 
