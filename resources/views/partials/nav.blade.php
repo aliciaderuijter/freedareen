@@ -40,15 +40,13 @@
 
                         <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>
                         @foreach (Config::get('languages') as $lang => $language)
                             @if ($lang != App::getLocale())
                                 <li>
                                     <a href="{{action ('LanguageController@switchLang', $lang) }}">{{$language}}</a>
                                 </li>
-                                @endif
-                                @endforeach
-                                </li>
+                            @endif
+                        @endforeach
                     </ul>
                 </li>
             </ul>

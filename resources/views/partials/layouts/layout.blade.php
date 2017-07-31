@@ -20,7 +20,20 @@
 <body>
 <div id="app">
     @include('partials.nav')
-    @yield('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                @yield('content')
+                <div class="margin-bottom">
+                    @include('partials.share')
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                @yield('sidebar')
+            </div>
+        </div>
+    </div>
+
     @include('partials.footer')
 </div>
 <script src="/js/app.js"></script>

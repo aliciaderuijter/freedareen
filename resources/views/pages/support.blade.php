@@ -2,13 +2,18 @@
 
 
 @section('content')
-    <div class="container main-fold">
-        <div class="row">
-            <div class="col-xs-12">
-                <p class="no-margin no-padding">{!! $support->support !!}</p>
-            </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="/images/solidarity.jpg" class="img top-image" alt="solidarity">
+            <p class="margin-top no-padding">{!! $support->support !!}</p>
         </div>
     </div>
-
-
 @endsection
+
+@section('sidebar')
+    @include('partials.donate')
+    <div class="sidebar margin-top">
+        @include('partials.action')
+    </div>
+@endsection
+

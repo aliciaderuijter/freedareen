@@ -24,6 +24,7 @@ class DonationsController extends Controller
     {
         $articles = Article::all();
 
+
         return view('aftermath.unsuccesful', compact('articles'));
     }
 
