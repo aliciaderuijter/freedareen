@@ -17,7 +17,6 @@
                 <li><a href="{{action('SupportsController@show')}}">@lang('nav-footer.support')</a></li>
                 <li><a href="{{action('TrialController@show')}}">@lang('nav-footer.trial')</a></li>
 
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">@lang('nav-footer.articles')
                         <span class="caret"></span></a>
@@ -28,9 +27,13 @@
                                 <a href="{{$article->article}}"
                                    target="_blank">{{ $article->{App::getLocale() . 'Title'} }}</a>
                             </li>
+                            <li><a href="{{action('ContactController@show')}}">@lang('nav-footer.contact')</a></li>
+
                         @endforeach
 
                     </ul>
+                <li><a href="{{action('ContactController@show')}}">@lang('nav-footer.contact')</a></li>
+
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -49,6 +52,7 @@
                         @endforeach
                     </ul>
                 </li>
+
             </ul>
         </div>
     </div>

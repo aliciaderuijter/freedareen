@@ -23,6 +23,9 @@ Route::get('about','DescriptionsController@show');
 Route::get('poems','PoemsController@show');
 Route::get('support','SupportsController@show');
 Route::get('trial','TrialController@show');
+Route::get('contact','ContactController@show');
+Route::post('contact','ContactController@email');
+
 
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
