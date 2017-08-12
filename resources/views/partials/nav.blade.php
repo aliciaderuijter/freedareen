@@ -27,7 +27,6 @@
                                 <a href="{{$article->article}}"
                                    target="_blank">{{ $article->{App::getLocale() . 'Title'} }}</a>
                             </li>
-                            <li><a href="{{action('ContactController@show')}}">@lang('nav-footer.contact')</a></li>
 
                         @endforeach
 
