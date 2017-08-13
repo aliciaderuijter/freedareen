@@ -15,3 +15,6 @@
         @include('partials.action')
     </div>
 @endsection
+
+@section('metaDescription', $trial->trial)
+
