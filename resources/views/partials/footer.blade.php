@@ -10,7 +10,7 @@
                             </i>
                         </button>
                     </a>
-                    <a href="mailto:@lang('misc.email')">
+                    <a href="{{action('ContactController@show')}}">
                         <button class="btn btn-default">
                             <i class="fa fa-fw fa-envelope" aria-hidden="true"></i>
 

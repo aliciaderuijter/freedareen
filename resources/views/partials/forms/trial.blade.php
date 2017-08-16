@@ -9,6 +9,12 @@
         </div>
 
         <div class="form-group">
+            <label for="twitter">Twitter text</label>
+            <input type="twitter" name="twitter"  class="form-control" value="{{ $tweets->has('trial') ? $tweets->get('trial') : ''  }}">
+
+        </div>
+
+        <div class="form-group">
             <button type="submit" class="btn btn-primary">@lang('misc.publish')</button>
         </div>
     </form>

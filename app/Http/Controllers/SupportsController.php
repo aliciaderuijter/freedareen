@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Support;
+use App\Models\Twitter;
 use Illuminate\Http\Request;
 
 class SupportsController extends Controller
@@ -16,9 +17,12 @@ class SupportsController extends Controller
         if (!$support) {
             $support = new support();
         }
-
+        $tweet = Twitter::where('page', 'support')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
         $articles = Article::all();
-        return view('pages.support', compact('support', 'articles'));
+        return view('pages.support', compact('support', 'articles','tweet'));
     }
 
 
@@ -33,8 +37,17 @@ class SupportsController extends Controller
             $support = new support;
         }
 
+        $tweet = Twitter::where('page', 'support')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $support-> support= $request->get('support');
         $support->save();
+
+        $tweet->tweet = $request->get('twitter');
+        $tweet->page = 'support';
+        $tweet->save();
 
         $request->session()->flash('status', 'Text saved successfully!');
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Donation;
 use App\Models\Story;
+use App\Models\Twitter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Srmklive\PayPal\Services\ExpressCheckout;
@@ -20,12 +21,18 @@ class HomeController extends Controller
             $story = new Story;
         }
 
+
+        $tweet = Twitter::where('page', 'story')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $donations = Donation::sum('amount');
         $people = Donation::count();
 
         $articles = Article::all();
 
-        return view('pages.welcome', compact('story', 'donations', 'people', 'articles'));
+        return view('pages.welcome', compact('story', 'donations', 'people', 'articles', 'tweet'));
     }
 
     public function paypal(Request $request)

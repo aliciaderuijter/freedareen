@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Poem;
+use App\Models\Twitter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -19,8 +20,13 @@ class PoemsController extends Controller
             $poem = new poem();
         }
 
+        $tweet = Twitter::where('page', 'poem')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $articles = Article::all();
-        return view('pages.poems', compact('poem', 'articles'));
+        return view('pages.poems', compact('poem', 'articles', 'tweet'));
     }
 
 
@@ -35,8 +41,18 @@ class PoemsController extends Controller
             $poem = new poem;
         }
 
+        $tweet = Twitter::where('page', 'poem')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $poem->poem = $request->get('poem');
         $poem->save();
+
+        $tweet->tweet = $request->get('twitter');
+        $tweet->page = 'poem';
+        $tweet->save();
+
 
         $request->session()->flash('status', 'Poem saved successfully!');
 

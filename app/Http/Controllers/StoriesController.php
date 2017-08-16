@@ -8,6 +8,7 @@ use App\Models\Poem;
 use App\Models\Story;
 use App\Models\Support;
 use App\Models\Trial;
+use App\Models\Twitter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -48,8 +49,10 @@ class StoriesController extends Controller
         }
 
         $articles = Article::all();
+        $tweets = Twitter::all()->pluck('tweet','page');
 
-        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial'));
+
+        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial', 'tweets','tweet'));
     }
 
 
@@ -61,14 +64,21 @@ class StoriesController extends Controller
         if (!$story) {
             $story = new Story;
         }
-        /*if(Story::where('language','en')){
-            $story = Story::where('language','en')->first();
-        } else {
-            $story = new Story;
-        }*/
+
+        $tweet = Twitter::where('page', 'story')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $story->story = $request->get('story');
         $story->language = App::getLocale();
         $story->save();
+
+        $tweet->tweet = $request->get('twitter');
+        $tweet->page = 'story';
+        $tweet->save();
+
+
 
         $request->session()->flash('status', 'Story saved successfully!');
 

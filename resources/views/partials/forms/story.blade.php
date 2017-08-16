@@ -7,6 +7,12 @@
         <textarea id="storyText" class="hidden"
                   name="story">{!! $story->story !!}</textarea>
     </div>
+        <div class="form-group">
+            <label for="twitter">Twitter text</label>
+            <input type="twitter" name="twitter" class="form-control" value="{{ $tweets->has('story') ? $tweets->get('story') : ''  }}">
+
+
+        </div>
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary">@lang('misc.publish')</button>

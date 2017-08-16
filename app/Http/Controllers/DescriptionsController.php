@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Description;
+use App\Models\Twitter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -18,8 +19,12 @@ class DescriptionsController extends Controller
               $description = new Description();
           }
 
+          $tweet = Twitter::where('page', 'about')->first();
+          if (!$tweet) {
+              $tweet = new Twitter;
+          }
           $articles= Article::all();
-          return view ('pages.about', compact('description','articles'));
+          return view ('pages.about', compact('description','articles', 'tweet'));
 
       }
     public function store(Request $request)
@@ -30,14 +35,19 @@ class DescriptionsController extends Controller
         if (!$description) {
             $description = new Description();
         }
-        /*if(Story::where('language','en')){
-            $story = Story::where('language','en')->first();
-        } else {
-            $story = new Story;
-        }*/
+        $tweet = Twitter::where('page', 'about')->first();
+        if (!$tweet) {
+            $tweet = new Twitter;
+        }
+
         $description->description = $request->get('description');
         $description->language = App::getLocale();
         $description->save();
+
+        $tweet->tweet = $request->get('twitter');
+        $tweet->page = 'about';
+        $tweet->save();
+
 
         $request->session()->flash('status', 'About Us saved successfully!');
 
