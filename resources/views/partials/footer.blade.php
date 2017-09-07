@@ -23,8 +23,22 @@
                     </a>
                 </p>
             </div>
-            <div class="col-xs-12 col-md-2">
-                <h4><a href="{{action('DescriptionsController@show')}}">@lang('nav-footer.about')</a></h4>
+            <div class="col-xs-12 col-md-2 col-md-offset-1">
+
+
+                <h4>
+                    <a href="{{action('DescriptionsController@show')}}">@lang('nav-footer.about')</a></h4>
+                <h4>
+                    <a href="{{action('PoemsController@show')}}">@lang('nav-footer.poems')</a>
+                </h4>
+
+
+                <h4>
+                    <a href="{{action('SupportsController@show')}}">@lang('nav-footer.support')</a></h4>
+
+                <h4><a href="{{action('TrialController@show')}}">@lang('nav-footer.trial')</a>
+                </h4>
+
 
             </div>
 
