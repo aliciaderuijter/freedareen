@@ -24,7 +24,7 @@ Route::get('poems','PoemsController@show');
 Route::get('support','SupportsController@show');
 Route::get('trial','TrialController@show');
 Route::get('contact','ContactController@show');
-Route::get('detention','DetentionController@show');
+Route::get('detention','DetentionsController@show');
 Route::post('contact','ContactController@email');
 
 
