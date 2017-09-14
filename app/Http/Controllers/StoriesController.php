@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Description;
+use App\Models\Detention;
 use App\Models\Poem;
 use App\Models\Story;
 use App\Models\Support;
@@ -25,6 +26,12 @@ class StoriesController extends Controller
 
         if (!$description) {
             $description = new Description;
+        }
+
+        $detention = Detention::where(['language' => App::getLocale()])->first();
+
+        if (!$detention) {
+            $detention = new Detention;
         }
 
         $poem = Poem::first();
@@ -49,10 +56,10 @@ class StoriesController extends Controller
         }
 
         $articles = Article::all();
-        $tweets = Twitter::all()->pluck('tweet','page');
+        $tweets = Twitter::all()->pluck('tweet', 'page');
 
 
-        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial', 'tweets','tweet'));
+        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial', 'detention', 'tweets', 'tweet'));
     }
 
 
@@ -77,7 +84,6 @@ class StoriesController extends Controller
         $tweet->tweet = $request->get('twitter');
         $tweet->page = 'story';
         $tweet->save();
-
 
 
         $request->session()->flash('status', 'Story saved successfully!');

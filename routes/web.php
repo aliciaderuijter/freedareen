@@ -24,6 +24,7 @@ Route::get('poems','PoemsController@show');
 Route::get('support','SupportsController@show');
 Route::get('trial','TrialController@show');
 Route::get('contact','ContactController@show');
+Route::get('detention','DetentionController@show');
 Route::post('contact','ContactController@email');
 
 
@@ -40,6 +41,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('update/articles', 'ArticlesController@store');
     Route::post('update/support', 'SupportsController@store');
     Route::post('update/trial', 'TrialController@store');
+    Route::post('update/detention','DetentionsController@store');
+
 
 
     Route::delete('articles/{article}', 'ArticlesController@delete');

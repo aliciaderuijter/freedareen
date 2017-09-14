@@ -22,7 +22,9 @@
                     <li><a data-toggle="tab" href="#poems">@lang('misc.poems')</a></li>
                     <li><a data-toggle="tab" href="#supportForm">@lang('misc.support')</a></li>
                     <li><a data-toggle="tab" href="#trial">@lang('nav-footer.trial')</a></li>
+                    <li><a data-toggle="tab" href="#detention">@lang('nav-footer.detention')</a></li>
                     <li><a data-toggle="tab" href="#articles">@lang('nav-footer.articles')</a></li>
+
 
                 </ul>
 
@@ -33,6 +35,8 @@
                     @include('partials.forms.poems')
                     @include('partials.forms.support')
                     @include('partials.forms.trial')
+                    @include('partials.forms.detention')
+
 
                 </div>
 

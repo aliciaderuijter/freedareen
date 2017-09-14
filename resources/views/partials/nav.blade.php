@@ -33,7 +33,6 @@
                     </ul>
                 <li><a href="{{action('ContactController@show')}}">@lang('nav-footer.contact')</a></li>
 
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
