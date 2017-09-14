@@ -19,7 +19,8 @@ return [
     'contact' => 'Contact us',
     'poems'=> 'Poems',
     'support'=>'Solidarity',
-    'trial'=>'Trial'
+    'trial'=>'Trial',
+    'detention'=>'Detention'
 
 
 

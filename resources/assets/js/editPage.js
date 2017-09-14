@@ -35,7 +35,11 @@ const app = new Vue({
         },
         editTrial(text){
             $('#trialText').text(text);
+        },
+        editDetention(text){
+            $('#detentionText').text(text);
         }
+
     },
 
     components: {

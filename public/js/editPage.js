@@ -44338,6 +44338,9 @@ var app = new Vue({
         },
         editTrial: function editTrial(text) {
             $('#trialText').text(text);
+        },
+        editDetention: function editDetention(text) {
+            $('#detentionText').text(text);
         }
     },
 
