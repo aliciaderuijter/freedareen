@@ -3,7 +3,16 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <medium-editor text="{{ $support->support }}" v-on:edit="editSupport" :reuse-medium-editor-instance="false"></medium-editor>
+            <medium-editor text="{{ $support->support }}"
+                           v-on:edit="editSupport"
+                           :reuse-medium-editor-instance="false"
+                           :reuse-medium-editor-instance="false"
+                           :options="{
+                            paste: {
+                            forcePlainText: false
+                            }
+                            }">
+            </medium-editor>
             <textarea class="hidden" id="support"
                       name="support">{!! $support->support !!}</textarea>
         </div>

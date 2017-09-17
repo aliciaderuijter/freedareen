@@ -22,22 +22,23 @@ const app = new Vue({
 
     methods: {
         editStory(text){
-            $('#storyText').text(text);
+            $('#storyText').text(text.event.target.innerHTML);
         },
         editAbout(text){
-            $('#description').text(text);
+            $('#description').text(text.event.target.innerHTML);
         },
         editPoem(text){
-            $('#poem').text(text);
+            $('#poem').text(text.event.target.innerHTML);
         },
         editSupport(text){
-            $('#support').text(text);
+            $('#support').text(text.event.target.innerHTML);
         },
         editTrial(text){
-            $('#trialText').text(text);
+            $('#trialText').text(text.event.target.innerHTML);
         },
         editDetention(text){
-            $('#detentionText').text(text);
+
+            $('#detentionText').text(text.event.target.innerHTML);
         }
 
     },

@@ -3,7 +3,15 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <medium-editor text="{{ $description->description }}" v-on:edit="editAbout" :reuse-medium-editor-instance="false"></medium-editor>
+            <medium-editor text="{{ $description->description }}"
+                           v-on:edit="editAbout"
+                           :reuse-medium-editor-instance="false"
+                           :options="{
+                            paste: {
+                            forcePlainText: false
+                            }
+                            }">
+            </medium-editor>
             <textarea class="hidden" id="description"
                       name="description">{!! $description->description !!}</textarea>
         </div>
