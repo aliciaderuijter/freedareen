@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Description;
 use App\Models\Detention;
+use App\Models\Media;
 use App\Models\Poem;
 use App\Models\Story;
 use App\Models\Support;
@@ -34,6 +35,12 @@ class StoriesController extends Controller
             $detention = new Detention;
         }
 
+		$media = Media::where(['language' => App::getLocale()])->first();
+
+		if (!$media) {
+			$media = new Media;
+		}
+
         $poem = Poem::first();
 
         if (!$poem) {
@@ -59,7 +66,7 @@ class StoriesController extends Controller
         $tweets = Twitter::all()->pluck('tweet', 'page');
 
 
-        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial', 'detention', 'tweets', 'tweet'));
+        return view('pages.update', compact('story', 'description', 'articles', 'poem', 'support', 'trial', 'detention','media', 'tweets', 'tweet'));
     }
 
 

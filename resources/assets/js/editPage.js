@@ -39,7 +39,11 @@ const app = new Vue({
         editDetention(text){
 
             $('#detentionText').text(text.event.target.innerHTML);
-        }
+        },
+		editMedia(text){
+
+			$('#mediaText').text(text.event.target.innerHTML);
+		}
 
     },
 
