@@ -1839,6 +1839,7 @@ exports.default = {
   },
   mounted: function mounted() {
     this.normalizeFields();
+    this.normalizeSortOrder();
     this.$nextTick(function () {
       this.fireEvent('initialized', this.tableFields);
     });
@@ -5174,7 +5175,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(35)();
-exports.push([module.i, "\n[v-cloak][data-v-09e6e91e] {\n  display: none;\n}\n.vuetable th.sortable[data-v-09e6e91e]:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-actions[data-v-09e6e91e] {\n  width: 15%;\n  padding: 12px 0px;\n  text-align: center;\n}\n.vuetable-pagination[data-v-09e6e91e] {\n  background: #f9fafb !important;\n}\n.vuetable-pagination-info[data-v-09e6e91e] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.vuetable-empty-result[data-v-09e6e91e] {\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n[v-cloak][data-v-873f5046] {\n  display: none;\n}\n.vuetable th.sortable[data-v-873f5046]:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-actions[data-v-873f5046] {\n  width: 15%;\n  padding: 12px 0px;\n  text-align: center;\n}\n.vuetable-pagination[data-v-873f5046] {\n  background: #f9fafb !important;\n}\n.vuetable-pagination-info[data-v-873f5046] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.vuetable-empty-result[data-v-873f5046] {\n  text-align: center;\n}\n", ""]);
 
 /***/ }),
 /* 35 */
@@ -32786,13 +32787,13 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(27),
   /* template */
-  __webpack_require__(44),
+  __webpack_require__(47),
   /* scopeId */
-  "data-v-09e6e91e",
+  "data-v-873f5046",
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\dareen\\node_modules\\vuetable-2\\src\\components\\Vuetable.vue"
+Component.options.__file = "C:\\wamp64\\www\\freedareen\\node_modules\\vuetable-2\\src\\components\\Vuetable.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Vuetable.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32803,9 +32804,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-09e6e91e", Component.options)
+    hotAPI.createRecord("data-v-873f5046", Component.options)
   } else {
-    hotAPI.reload("data-v-09e6e91e", Component.options)
+    hotAPI.reload("data-v-873f5046", Component.options)
   }
 })()}
 
@@ -32820,13 +32821,13 @@ var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(28),
   /* template */
-  __webpack_require__(47),
+  __webpack_require__(44),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\dareen\\node_modules\\vuetable-2\\src\\components\\VuetablePagination.vue"
+Component.options.__file = "C:\\wamp64\\www\\freedareen\\node_modules\\vuetable-2\\src\\components\\VuetablePagination.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] VuetablePagination.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32837,9 +32838,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f3be922a", Component.options)
+    hotAPI.createRecord("data-v-0aa0ec57", Component.options)
   } else {
-    hotAPI.reload("data-v-f3be922a", Component.options)
+    hotAPI.reload("data-v-0aa0ec57", Component.options)
   }
 })()}
 
@@ -32860,7 +32861,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\dareen\\node_modules\\vuetable-2\\src\\components\\VuetablePaginationMixin.vue"
+Component.options.__file = "C:\\wamp64\\www\\freedareen\\node_modules\\vuetable-2\\src\\components\\VuetablePaginationMixin.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -32870,9 +32871,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6b2e23f4", Component.options)
+    hotAPI.createRecord("data-v-3f0d3c1a", Component.options)
   } else {
-    hotAPI.reload("data-v-6b2e23f4", Component.options)
+    hotAPI.reload("data-v-3f0d3c1a", Component.options)
   }
 })()}
 
@@ -32893,7 +32894,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\dareen\\resources\\assets\\js\\components\\DonationsTable.vue"
+Component.options.__file = "C:\\wamp64\\www\\freedareen\\resources\\assets\\js\\components\\DonationsTable.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] DonationsTable.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32904,9 +32905,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4e2dd14c", Component.options)
+    hotAPI.createRecord("data-v-675d0ec6", Component.options)
   } else {
-    hotAPI.reload("data-v-4e2dd14c", Component.options)
+    hotAPI.reload("data-v-675d0ec6", Component.options)
   }
 })()}
 
@@ -32927,7 +32928,7 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\wamp64\\www\\dareen\\resources\\assets\\js\\components\\MoneyInput.vue"
+Component.options.__file = "C:\\wamp64\\www\\freedareen\\resources\\assets\\js\\components\\MoneyInput.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] MoneyInput.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -32938,9 +32939,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3c0f55d2", Component.options)
+    hotAPI.createRecord("data-v-20ee3afa", Component.options)
   } else {
-    hotAPI.reload("data-v-3c0f55d2", Component.options)
+    hotAPI.reload("data-v-20ee3afa", Component.options)
   }
 })()}
 
@@ -32949,6 +32950,181 @@ module.exports = Component.exports
 
 /***/ }),
 /* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.tablePagination && _vm.tablePagination.last_page > 1),
+      expression: "tablePagination && tablePagination.last_page > 1"
+    }],
+    class: _vm.css.wrapperClass
+  }, [_c('a', {
+    class: ['btn-nav', _vm.css.linkClass, _vm.isOnFirstPage ? _vm.css.disabledClass : ''],
+    on: {
+      "click": function($event) {
+        _vm.loadPage(1)
+      }
+    }
+  }, [(_vm.css.icons.first != '') ? _c('i', {
+    class: [_vm.css.icons.first]
+  }) : _c('span', [_vm._v("«")])]), _vm._v(" "), _c('a', {
+    class: ['btn-nav', _vm.css.linkClass, _vm.isOnFirstPage ? _vm.css.disabledClass : ''],
+    on: {
+      "click": function($event) {
+        _vm.loadPage('prev')
+      }
+    }
+  }, [(_vm.css.icons.next != '') ? _c('i', {
+    class: [_vm.css.icons.prev]
+  }) : _c('span', [_vm._v(" ‹")])]), _vm._v(" "), (_vm.notEnoughPages) ? [_vm._l((_vm.totalPage), function(n) {
+    return [_c('a', {
+      class: [_vm.css.pageClass, _vm.isCurrentPage(n) ? _vm.css.activeClass : ''],
+      domProps: {
+        "innerHTML": _vm._s(n)
+      },
+      on: {
+        "click": function($event) {
+          _vm.loadPage(n)
+        }
+      }
+    })]
+  })] : [_vm._l((_vm.windowSize), function(n) {
+    return [_c('a', {
+      class: [_vm.css.pageClass, _vm.isCurrentPage(_vm.windowStart + n - 1) ? _vm.css.activeClass : ''],
+      domProps: {
+        "innerHTML": _vm._s(_vm.windowStart + n - 1)
+      },
+      on: {
+        "click": function($event) {
+          _vm.loadPage(_vm.windowStart + n - 1)
+        }
+      }
+    })]
+  })], _vm._v(" "), _c('a', {
+    class: ['btn-nav', _vm.css.linkClass, _vm.isOnLastPage ? _vm.css.disabledClass : ''],
+    on: {
+      "click": function($event) {
+        _vm.loadPage('next')
+      }
+    }
+  }, [(_vm.css.icons.next != '') ? _c('i', {
+    class: [_vm.css.icons.next]
+  }) : _c('span', [_vm._v("› ")])]), _vm._v(" "), _c('a', {
+    class: ['btn-nav', _vm.css.linkClass, _vm.isOnLastPage ? _vm.css.disabledClass : ''],
+    on: {
+      "click": function($event) {
+        _vm.loadPage(_vm.totalPage)
+      }
+    }
+  }, [(_vm.css.icons.last != '') ? _c('i', {
+    class: [_vm.css.icons.last]
+  }) : _c('span', [_vm._v("»")])])], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0aa0ec57", module.exports)
+  }
+}
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "form-group",
+    class: {
+      'has-error': _vm.showWarning
+    }
+  }, [_c('label', {
+    attrs: {
+      "for": _vm.id
+    }
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
+    staticClass: "input-group"
+  }, [_c('span', {
+    staticClass: "input-group-addon"
+  }, [_vm._v("$")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.amount),
+      expression: "amount"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "id": _vm.id,
+      "name": _vm.id
+    },
+    domProps: {
+      "value": (_vm.amount)
+    },
+    on: {
+      "keyup": _vm.verify,
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.amount = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('span', {
+    staticClass: "help-block text-danger",
+    class: {
+      transparent: !_vm.showWarning
+    }
+  }, [_vm._v("The amount most be a positive number.")])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-20ee3afa", module.exports)
+  }
+}
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('vuetable', {
+    ref: "vuetable",
+    attrs: {
+      "api-url": _vm.url,
+      "fields": _vm.fields,
+      "css": _vm.css,
+      "pagination-path": "",
+      "per-page": 4
+    },
+    on: {
+      "vuetable:pagination-data": _vm.onPaginationData
+    }
+  }), _vm._v(" "), _c('div', [_c('vuetable-pagination', {
+    ref: "pagination",
+    attrs: {
+      "css": _vm.cssPagination,
+      "icons": _vm.icons
+    },
+    on: {
+      "vuetable-pagination:change-page": _vm.onChangePage
+    }
+  })], 1)], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-675d0ec6", module.exports)
+  }
+}
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -33142,176 +33318,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-09e6e91e", module.exports)
-  }
-}
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "form-group",
-    class: {
-      'has-error': _vm.showWarning
-    }
-  }, [_c('label', {
-    attrs: {
-      "for": _vm.id
-    }
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
-    staticClass: "input-group"
-  }, [_c('span', {
-    staticClass: "input-group-addon"
-  }, [_vm._v("$")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.amount),
-      expression: "amount"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "id": _vm.id,
-      "name": _vm.id
-    },
-    domProps: {
-      "value": (_vm.amount)
-    },
-    on: {
-      "keyup": _vm.verify,
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.amount = $event.target.value
-      }
-    }
-  })]), _vm._v(" "), _c('span', {
-    staticClass: "help-block text-danger",
-    class: {
-      transparent: !_vm.showWarning
-    }
-  }, [_vm._v("The amount most be a positive number.")])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-3c0f55d2", module.exports)
-  }
-}
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('vuetable', {
-    ref: "vuetable",
-    attrs: {
-      "api-url": _vm.url,
-      "fields": _vm.fields,
-      "css": _vm.css,
-      "pagination-path": "",
-      "per-page": 4
-    },
-    on: {
-      "vuetable:pagination-data": _vm.onPaginationData
-    }
-  }), _vm._v(" "), _c('div', [_c('vuetable-pagination', {
-    ref: "pagination",
-    attrs: {
-      "css": _vm.cssPagination,
-      "icons": _vm.icons
-    },
-    on: {
-      "vuetable-pagination:change-page": _vm.onChangePage
-    }
-  })], 1)], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4e2dd14c", module.exports)
-  }
-}
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return (_vm.tablePagination && _vm.tablePagination.last_page > 1) ? _c('div', {
-    class: _vm.css.wrapperClass
-  }, [_c('a', {
-    class: ['btn-nav', _vm.css.linkClass, _vm.isOnFirstPage ? _vm.css.disabledClass : ''],
-    on: {
-      "click": function($event) {
-        _vm.loadPage(1)
-      }
-    }
-  }, [(_vm.css.icons.first != '') ? _c('i', {
-    class: [_vm.css.icons.first]
-  }) : _c('span', [_vm._v("«")])]), _vm._v(" "), _c('a', {
-    class: ['btn-nav', _vm.css.linkClass, _vm.isOnFirstPage ? _vm.css.disabledClass : ''],
-    on: {
-      "click": function($event) {
-        _vm.loadPage('prev')
-      }
-    }
-  }, [(_vm.css.icons.next != '') ? _c('i', {
-    class: [_vm.css.icons.prev]
-  }) : _c('span', [_vm._v(" ‹")])]), _vm._v(" "), (_vm.notEnoughPages) ? [_vm._l((_vm.totalPage), function(n) {
-    return [_c('a', {
-      class: [_vm.css.pageClass, _vm.isCurrentPage(n) ? _vm.css.activeClass : ''],
-      domProps: {
-        "innerHTML": _vm._s(n)
-      },
-      on: {
-        "click": function($event) {
-          _vm.loadPage(n)
-        }
-      }
-    })]
-  })] : [_vm._l((_vm.windowSize), function(n) {
-    return [_c('a', {
-      class: [_vm.css.pageClass, _vm.isCurrentPage(_vm.windowStart + n - 1) ? _vm.css.activeClass : ''],
-      domProps: {
-        "innerHTML": _vm._s(_vm.windowStart + n - 1)
-      },
-      on: {
-        "click": function($event) {
-          _vm.loadPage(_vm.windowStart + n - 1)
-        }
-      }
-    })]
-  })], _vm._v(" "), _c('a', {
-    class: ['btn-nav', _vm.css.linkClass, _vm.isOnLastPage ? _vm.css.disabledClass : ''],
-    on: {
-      "click": function($event) {
-        _vm.loadPage('next')
-      }
-    }
-  }, [(_vm.css.icons.next != '') ? _c('i', {
-    class: [_vm.css.icons.next]
-  }) : _c('span', [_vm._v("› ")])]), _vm._v(" "), _c('a', {
-    class: ['btn-nav', _vm.css.linkClass, _vm.isOnLastPage ? _vm.css.disabledClass : ''],
-    on: {
-      "click": function($event) {
-        _vm.loadPage(_vm.totalPage)
-      }
-    }
-  }, [(_vm.css.icons.last != '') ? _c('i', {
-    class: [_vm.css.icons.last]
-  }) : _c('span', [_vm._v("»")])])], 2) : _vm._e()
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f3be922a", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-873f5046", module.exports)
   }
 }
 
@@ -33326,13 +33333,13 @@ var content = __webpack_require__(34);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(49)("456441cb", content, false);
+var update = __webpack_require__(49)("50e8b910", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../css-loader/index.js!../../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-09e6e91e\",\"scoped\":true,\"hasInlineConfig\":true}!../../../vue-loader/lib/selector.js?type=styles&index=0!./Vuetable.vue", function() {
-     var newContent = require("!!../../../css-loader/index.js!../../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-09e6e91e\",\"scoped\":true,\"hasInlineConfig\":true}!../../../vue-loader/lib/selector.js?type=styles&index=0!./Vuetable.vue");
+   module.hot.accept("!!../../../css-loader/index.js!../../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-873f5046\",\"scoped\":true,\"hasInlineConfig\":true}!../../../vue-loader/lib/selector.js?type=styles&index=0!./Vuetable.vue", function() {
+     var newContent = require("!!../../../css-loader/index.js!../../../vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-873f5046\",\"scoped\":true,\"hasInlineConfig\":true}!../../../vue-loader/lib/selector.js?type=styles&index=0!./Vuetable.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -43873,6 +43880,10 @@ var app = new Vue({
         editDetention: function editDetention(text) {
 
             $('#detentionText').text(text.event.target.innerHTML);
+        },
+        editMedia: function editMedia(text) {
+
+            $('#mediaText').text(text.event.target.innerHTML);
         }
     },
 

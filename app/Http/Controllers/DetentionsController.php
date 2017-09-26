@@ -13,10 +13,10 @@ class DetentionsController extends Controller
     public function show()
 
     {
-        $detention = detention::first();
+        $detention = Detention::first();
 
         if (!$detention) {
-            $detention = new detention();
+            $detention = new Detention();
 
         }
 
@@ -39,7 +39,7 @@ class DetentionsController extends Controller
 
         $detention = Detention::where('language', App::getLocale())->first();
         if (!$detention) {
-            $detention = new detention;
+            $detention = new Detention;
         }
         $tweet = Twitter::where('page', 'detention')->first();
         if (!$tweet) {

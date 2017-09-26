@@ -23,6 +23,7 @@
                     <li><a data-toggle="tab" href="#supportForm">@lang('misc.support')</a></li>
                     <li><a data-toggle="tab" href="#trial">@lang('nav-footer.trial')</a></li>
                     <li><a data-toggle="tab" href="#detention">@lang('nav-footer.detention')</a></li>
+                    <li><a data-toggle="tab" href="#media">@lang('nav-footer.media')</a></li>
                     <li><a data-toggle="tab" href="#articles">@lang('nav-footer.articles')</a></li>
 
 
@@ -36,6 +37,8 @@
                     @include('partials.forms.support')
                     @include('partials.forms.trial')
                     @include('partials.forms.detention')
+                    @include('partials.forms.media')
+
 
 
                 </div>
