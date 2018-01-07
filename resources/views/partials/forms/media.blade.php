@@ -7,7 +7,7 @@
                            v-on:edit="editMedia"
                            :reuse-medium-editor-instance="false"
                            :options="{
-                                paste: { 
+                                paste: {
                                     forcePlainText: false
                                 }
                             }">

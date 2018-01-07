@@ -8,56 +8,53 @@ use App\Models\Twitter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
-class MediaController extends Controller
-{
-    public function show()
+class MediaController extends Controller {
+	public function show() {
+		$media = Media::first();
 
-    {
-        $media = Media::first();
+		if (!$media) {
+			$media = new Media();
 
-        if (!$media) {
-            $media = new media();
-
-        }
+		}
 
 
-        $tweet = Twitter::where('page', 'media')->first();
-        if (!$tweet) {
-            $tweet = new Twitter;
+		$tweet = Twitter::where('page', 'media')->first();
+		if (!$tweet) {
+			$tweet = new Twitter;
 
-        }
+		}
 
-        $articles = Article::all();
-        return view('pages.media', compact('media', 'articles', 'tweet'));
-    }
+		$articles = Article::all();
 
-    public function store(Request $request)
-    {
+		return view('pages.media', compact('media', 'articles', 'tweet'));
+	}
 
-        $this->validate($request, ['media' => 'required']);
+	public function store(Request $request) {
 
-
-        $media = Media::where('language', App::getLocale())->first();
-        if (!$media) {
-            $media = new Media;
-        }
-        $tweet = Twitter::where('page', 'media')->first();
-        if (!$tweet) {
-            $tweet = new Twitter;
-        }
-        $media->media = $request->get('media');
-        $media->language = App::getLocale();
-        $media->save();
-
-        $tweet->tweet = $request->get('twitter');
-        $tweet->page = 'media';
-        $tweet->save();
+		$this->validate($request, ['media' => 'required']);
 
 
-        $request->session()->flash('status', 'Text saved successfully!');
+		$media = Media::where('language', App::getLocale())->first();
+		if (!$media) {
+			$media = new Media;
+		}
+		$tweet = Twitter::where('page', 'media')->first();
+		if (!$tweet) {
+			$tweet = new Twitter;
+		}
+		$media->media = $request->get('media');
+		$media->language = App::getLocale();
+		$media->save();
 
-        return redirect()->back();
+		$tweet->tweet = $request->get('twitter');
+		$tweet->page = 'media';
+		$tweet->save();
 
-    }
+
+		$request->session()->flash('status', 'Text saved successfully!');
+
+		return redirect()->back();
+
+	}
+
 }
-

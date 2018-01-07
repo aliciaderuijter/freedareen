@@ -21,7 +21,7 @@ return [
     'support'=>'Solidarity',
     'trial'=>'Trial',
     'detention'=>'Detention',
-    'media'=>'Media'
+	'media'=>'Media'
 
 
 

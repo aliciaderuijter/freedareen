@@ -18,6 +18,8 @@
                 <li><a href="{{action('TrialController@show')}}">@lang('nav-footer.trial')</a></li>
                 <li><a href="{{action('MediaController@show')}}">@lang('nav-footer.media')</a></li>
                 <li><a href="{{action('DetentionsController@show')}}">@lang('nav-footer.detention')</a></li>
+                <li><a href="{{action('MediaController@show')}}">@lang('nav-footer.media')</a></li>
+
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">@lang('nav-footer.articles')

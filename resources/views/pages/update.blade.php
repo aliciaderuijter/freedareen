@@ -37,6 +37,8 @@
                     @include('partials.forms.trial')
                     @include('partials.forms.media')
                     @include('partials.forms.detention')
+                    @include('partials.forms.media')
+
 
 
                 </div>

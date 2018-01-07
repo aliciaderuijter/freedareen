@@ -35,13 +35,11 @@ class StoriesController extends Controller
             $detention = new Detention;
         }
 
-        $media = Media::where(['language' => App::getLocale()])->first();
+		$media = Media::where(['language' => App::getLocale()])->first();
 
-        if (!$media) {
-            $media = new media;
-
-        }
-
+		if (!$media) {
+			$media = new Media;
+		}
 
         $poem = Poem::first();
 
@@ -63,7 +61,6 @@ class StoriesController extends Controller
             $trial = new trial;
 
         }
-
 
         $articles = Article::all();
         $tweets = Twitter::all()->pluck('tweet', 'page');
