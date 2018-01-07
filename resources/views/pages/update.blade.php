@@ -23,9 +23,9 @@
                     <li><a data-toggle="tab" href="#supportForm">@lang('misc.support')</a></li>
                     <li><a data-toggle="tab" href="#trial">@lang('nav-footer.trial')</a></li>
                     <li><a data-toggle="tab" href="#detention">@lang('nav-footer.detention')</a></li>
+                    <li><a data-toggle="tab" href="#media">@lang('nav-footer.media')</a></li>
                     <li><a data-toggle="tab" href="#articles">@lang('nav-footer.articles')</a></li>
-
-
+                    <li><a href="{{action('BackUpController@dump')}}">@lang('misc.backup')</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -35,6 +35,7 @@
                     @include('partials.forms.poems')
                     @include('partials.forms.support')
                     @include('partials.forms.trial')
+                    @include('partials.forms.media')
                     @include('partials.forms.detention')
 
 

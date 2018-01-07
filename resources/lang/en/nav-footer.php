@@ -20,7 +20,8 @@ return [
     'poems'=> 'Poems',
     'support'=>'Solidarity',
     'trial'=>'Trial',
-    'detention'=>'Detention'
+    'detention'=>'Detention',
+    'media'=>'Media'
 
 
 

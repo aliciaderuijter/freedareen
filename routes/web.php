@@ -25,6 +25,7 @@ Route::get('support','SupportsController@show');
 Route::get('trial','TrialController@show');
 Route::get('contact','ContactController@show');
 Route::get('detention','DetentionsController@show');
+Route::get('media','MediaController@show');
 Route::post('contact','ContactController@email');
 
 
@@ -34,6 +35,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::post('login', 'Auth\LoginController@login');
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('backup', 'BackUpController@dump');
     Route::get('update','StoriesController@update');
     Route::post('update/stories', 'StoriesController@store');
     Route::post('update/about', 'DescriptionsController@store');
@@ -41,7 +43,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('update/articles', 'ArticlesController@store');
     Route::post('update/support', 'SupportsController@store');
     Route::post('update/trial', 'TrialController@store');
+    Route::post('update/media', 'MediaController@store');
     Route::post('update/detention','DetentionsController@store');
+
 
 
 

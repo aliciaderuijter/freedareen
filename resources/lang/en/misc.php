@@ -37,7 +37,8 @@ return [
     'email' => 'freedareentatour@gmail.com',
     'poems' => 'poems',
     'support' => 'Solidarity',
-    'generosity'=> 'https://www.generosity.com/fundraising/dareen-tatour-legal-aid--5'
+    'generosity'=> 'https://www.generosity.com/fundraising/dareen-tatour-legal-aid--5',
+    'backup' => 'Back-up'
 
 
 

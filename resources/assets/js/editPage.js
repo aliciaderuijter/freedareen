@@ -37,13 +37,16 @@ const app = new Vue({
             $('#trialText').text(text.event.target.innerHTML);
         },
         editDetention(text){
-
+            console.log(text);
             $('#detentionText').text(text.event.target.innerHTML);
-        }
-
+        },
+        editMedia(text){
+            console.log(text);
+            $('#mediaText').text(text.event.target.innerHTML);
+        },
     },
-
     components: {
         'medium-editor': editor
     }
+
 });
