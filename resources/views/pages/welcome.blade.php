@@ -26,22 +26,24 @@
 @endsection
 @section('sidebar')
     @include('partials.donate')
-    <div class="sidebar margin-top">
-        @include('partials.action')
-    </div>
+    <hr>
+    @include('partials.album')
+    <hr>
+    @include('partials.action')
+
 @endsection
 
 @section('script')
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
     <script>
-        window.paypalCheckoutReady = function () {
-            paypal.checkout.setup(
-                '{{env('PAYPAL_MODE', '') == 'live' ? env('PAYPAL_LIVE_API_PASSWORD', '') : env('PAYPAL_SANDBOX_API_PASSWORD', '')}}', {
-                    environment: '{{ env('PAYPAL_MODE', '') }}',
-                    button: 'donate'
-                });
-        };
+		window.paypalCheckoutReady = function () {
+			paypal.checkout.setup(
+				'{{env('PAYPAL_MODE', '') == 'live' ? env('PAYPAL_LIVE_API_PASSWORD', '') : env('PAYPAL_SANDBOX_API_PASSWORD', '')}}', {
+					environment: '{{ env('PAYPAL_MODE', '') }}',
+					button: 'donate'
+				});
+		};
     </script>
 
 @endsection
