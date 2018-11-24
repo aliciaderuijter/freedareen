@@ -41,7 +41,7 @@ return [
     'generosity'=> 'https://www.generosity.com/fundraising/dareen-tatour-legal-aid--5',
 	'album' => '#Poem on Trial',
 	'albumLink' => 'https://dareentatour.bandcamp.com/album/poemontrial?fbclid=IwAR22JfeHD5eJx05Fa4A6l5peAa4eT5ZqzjhH7dWMV53hyo9DI0Hp2ZlZ5iE',
-	'albumPreview' => 'Preview album'
+	'albumPreview' => 'Preview album',
     'backup' => 'Back-up'
 
 
