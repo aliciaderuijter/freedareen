@@ -46,8 +46,8 @@ const app = new Vue({
 		}
 
     },
-
     components: {
         'medium-editor': editor
     }
+
 });

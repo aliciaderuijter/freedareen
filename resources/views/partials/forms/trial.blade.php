@@ -11,7 +11,7 @@
                             forcePlainText: false
                             }
                             }">
-                
+
             </medium-editor>
             <textarea class="hidden" id="trialText"
                       name="trial">{!! $trial->trial !!}</textarea>
