@@ -6,7 +6,7 @@
             Dareen Tatour is appealing against her conviction
             donate here to help cover her legal expences</h4>
 
-        <a href="@lang('misc.donateLink')" target="_blank">
+        <a href="@lang('misc.albumLink')" target="_blank">
             <button class="btn btn-primary">Donate</button>
         </a>
     </div>
